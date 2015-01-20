@@ -9,5 +9,8 @@ FizzBuzz.prototype.isDivisibleByFifteen = function(number) {
 };
 
 FizzBuzz.prototype.says = function(number) {
+	if (this.isDivisibleByFifteen(number)) return "FizzBuzz";
 	if (this._isDivisibleBy(number, 3)) return "Fizz";
+	if (this._isDivisibleBy(number, 5)) return "Buzz";
+	return number;
 };
